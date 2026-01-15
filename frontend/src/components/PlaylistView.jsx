@@ -24,13 +24,25 @@ function PlaylistView({ playlist }) {
   }
 
   const totalDuration = playlist.tracks.reduce((acc, track) => {
-    const parts = track.duration.split(":")
-    const min = Number(parts[0])
-    const sec = Number(parts[1])
+    const duration = track.duration
+    
+    // Ignorer les durées "N/A"
+    if (!duration || duration === "N/A") {
+      return acc
+    }
+    
+    const parts = duration.split(":")
+    if (parts.length !== 2) {
+      return acc
+    }
+    
+    const min = Number(parts[0]) || 0
+    const sec = Number(parts[1]) || 0
     return acc + min * 60 + sec
   }, 0)
-
+  
   const formatTotalDuration = (seconds) => {
+    if (seconds === 0) return "? min"
     const min = Math.floor(seconds / 60)
     return min + " min"
   }

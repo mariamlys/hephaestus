@@ -4,6 +4,7 @@
       "identifier": "bleak_house_cl_librivox",
       "title": "Bleak House",
       "artist": "Charles Dickens",
+      "creator": "Charles Dickens",
       "duration": "N/A",
       "keyword": "running"
     },
@@ -11,13 +12,7 @@
       "identifier": "Dragnet_OTR",
       "title": "Dragnet the 50's radio show",
       "artist": "Unknown Artist",
-      "duration": "N/A",
-      "keyword": "running"
-    },
-    {
-      "identifier": "OTRR_Gunsmoke_Singles",
-      "title": "Gunsmoke - Single Episodes",
-      "artist": "Old Time Radio Researchers Group",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "running"
     },
@@ -25,6 +20,15 @@
       "identifier": "OTRR_Dragnet_Singles",
       "title": "Dragnet - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
+      "duration": "N/A",
+      "keyword": "running"
+    },
+    {
+      "identifier": "OTRR_Gunsmoke_Singles",
+      "title": "Gunsmoke - Single Episodes",
+      "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "running"
     },
@@ -32,6 +36,7 @@
       "identifier": "OTRR_Suspense_Singles",
       "title": "Suspense - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "running"
     },
@@ -39,6 +44,7 @@
       "identifier": "OTRR_X_Minus_One_Singles",
       "title": "X Minus One - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "running"
     },
@@ -46,6 +52,7 @@
       "identifier": "ird059",
       "title": "The Conet Project - Recordings of Shortwave Numbers Stations [ird059]",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "running"
     },
@@ -53,6 +60,7 @@
       "identifier": "OTRR_Dimension_X_Singles",
       "title": "Dimension X - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "running"
     },
@@ -60,6 +68,7 @@
       "identifier": "ptc1978-11-18.flac16",
       "title": "The Jonestown Death Tape (FBI No. Q 042)",
       "artist": "The Rev. Jim Jones, et al. (The Peoples Temple cult)",
+      "creator": "The Rev. Jim Jones, et al. (The Peoples Temple cult)",
       "duration": "44:29",
       "keyword": "running"
     },
@@ -67,6 +76,7 @@
       "identifier": "OTRR_Theater_Five_Singles",
       "title": "Theater Five - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "running"
     },
@@ -74,6 +84,7 @@
       "identifier": "31-lire-ou-courir-la-nuit-ou-le-jour",
       "title": "#31 - Lire ou courir ? La nuit ou le jour ?",
       "artist": "Jogging Bonito",
+      "creator": "Jogging Bonito",
       "duration": "N/A",
       "keyword": "jogging"
     },
@@ -81,6 +92,7 @@
       "identifier": "Episode64Recovery",
       "title": "Episdoe 64- Recovery During Workouts",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "jogging"
     },
@@ -88,13 +100,7 @@
       "identifier": "TeamSport",
       "title": "Team Sport",
       "artist": "Unknown Artist",
-      "duration": "N/A",
-      "keyword": "jogging"
-    },
-    {
-      "identifier": "TBECD005-MP3-192k-VBR",
-      "title": "Opus Instrumentalus 2: Vibrations",
-      "artist": "Trance Blackman",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "jogging"
     },
@@ -102,6 +108,7 @@
       "identifier": "mtk159",
       "title": "Yuppster - Ambition EP [mtk159]",
       "artist": "Yuppster",
+      "creator": "Yuppster",
       "duration": "N/A",
       "keyword": "jogging"
     },
@@ -109,6 +116,7 @@
       "identifier": "Insight-150205",
       "title": "Insight: The Danny Oliver Foundation / Running for Health / Photographer Kurt Fishback / Sound Advice: New Millennium Series",
       "artist": "Capital Public Radio, Inc.",
+      "creator": "Capital Public Radio, Inc.",
       "duration": "50:44",
       "keyword": "jogging"
     },
@@ -116,6 +124,7 @@
       "identifier": "Va-KarmatonicVol.1promoRelease2012",
       "title": "VA - Karmatonic Vol. 1 (promo release 2012)",
       "artist": "Karmatonic Records",
+      "creator": "Karmatonic Records",
       "duration": "N/A",
       "keyword": "jogging"
     },
@@ -123,6 +132,7 @@
       "identifier": "PregnancyExercises",
       "title": "Pregnancy Exercises",
       "artist": "Chris Dunn",
+      "creator": "Chris Dunn",
       "duration": "N/A",
       "keyword": "jogging"
     },
@@ -130,6 +140,15 @@
       "identifier": "TheChubbyLittleLoserEpisode",
       "title": "The Chubby Little Loser Episode",
       "artist": "Mr Smash",
+      "creator": "Mr Smash",
+      "duration": "N/A",
+      "keyword": "jogging"
+    },
+    {
+      "identifier": "TBECD005-MP3-192k-VBR",
+      "title": "Opus Instrumentalus 2: Vibrations",
+      "artist": "Trance Blackman",
+      "creator": "Trance Blackman",
       "duration": "N/A",
       "keyword": "jogging"
     },
@@ -137,6 +156,7 @@
       "identifier": "Smelly_Monkeys__37",
       "title": "Smelly Monkeys # 37",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "jogging"
     },
@@ -144,6 +164,7 @@
       "identifier": "dystopiaq029",
       "title": "[dystopiaq029] Various Artists - mix-toor presents: This is material music.I do your condition",
       "artist": "Various Artists",
+      "creator": "Various Artists",
       "duration": "N/A",
       "keyword": "cardio"
     },
@@ -151,6 +172,7 @@
       "identifier": "Soud.AlShouriam_Cardio0tonic",
       "title": "القران الكريم بصوت الشيخ سعود الشريم",
       "artist": "https://cardio-tonic.blogspot.com/",
+      "creator": "https://cardio-tonic.blogspot.com/",
       "duration": "N/A",
       "keyword": "cardio"
     },
@@ -158,6 +180,7 @@
       "identifier": "cardiotonic_002",
       "title": "القران الكريم بصوت الشيخ محمود خليل الحصرى -- نسخة الاذاعة المصرية",
       "artist": "https://cardio-tonic.blogspot.com/",
+      "creator": "https://cardio-tonic.blogspot.com/",
       "duration": "N/A",
       "keyword": "cardio"
     },
@@ -165,6 +188,7 @@
       "identifier": "reggaetontxl9-djanthonystyles-djmv",
       "title": "Reggaeton TXL 9 - DJ Anthony Styles X DJ MV",
       "artist": "@ReggaetonTXL",
+      "creator": "@ReggaetonTXL",
       "duration": "N/A",
       "keyword": "cardio"
     },
@@ -172,6 +196,7 @@
       "identifier": "49.HiitVsLiss",
       "title": "49. Hiit Vs Liss",
       "artist": "Luis Carballo",
+      "creator": "Luis Carballo",
       "duration": "N/A",
       "keyword": "cardio"
     },
@@ -179,6 +204,7 @@
       "identifier": "ChroCardioFr29",
       "title": "Chro Cardio Fr 29",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "cardio"
     },
@@ -186,6 +212,7 @@
       "identifier": "tumours_trauma_infection_shock_isch_cardio_thyroid_DrMataryREV2008_1aim.net",
       "title": "DrMataryREV2008_2_1aim",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "cardio"
     },
@@ -193,6 +220,7 @@
       "identifier": "34ElCardioParaLaPerdidaDeGrasa",
       "title": "34 El Cardio Para La Perdida De Grasa",
       "artist": "Luis Carballo",
+      "creator": "Luis Carballo",
       "duration": "N/A",
       "keyword": "cardio"
     },
@@ -200,6 +228,7 @@
       "identifier": "migymencasa-138",
       "title": "migymencasa-138",
       "artist": "Sergio Catalán",
+      "creator": "Sergio Catalán",
       "duration": "N/A",
       "keyword": "cardio"
     },
@@ -207,6 +236,7 @@
       "identifier": "migymencasa-130",
       "title": "migymencasa-130",
       "artist": "Sergio Catalán",
+      "creator": "Sergio Catalán",
       "duration": "N/A",
       "keyword": "cardio"
     },
@@ -214,6 +244,7 @@
       "identifier": "OTRR_Philip_Marlowe_Singles",
       "title": "Adventures of Philip Marlowe - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "energetic"
     },
@@ -221,6 +252,7 @@
       "identifier": "treasure_seekers_solo_librivox",
       "title": "The Story of the Treasure Seekers",
       "artist": "E. Nesbit",
+      "creator": "E. Nesbit",
       "duration": "N/A",
       "keyword": "energetic"
     },
@@ -228,6 +260,7 @@
       "identifier": "creature_beyond_infinity_mn_0901_librivox",
       "title": "The Creature from Beyond Infinity",
       "artist": "Henry Kuttner",
+      "creator": "Henry Kuttner",
       "duration": "N/A",
       "keyword": "energetic"
     },
@@ -235,6 +268,7 @@
       "identifier": "woman_white_0811_librivox",
       "title": "The Woman in White",
       "artist": "Wilkie Collins",
+      "creator": "Wilkie Collins",
       "duration": "N/A",
       "keyword": "energetic"
     },
@@ -242,6 +276,7 @@
       "identifier": "powell_1803_librivox",
       "title": "Biographical Memoir of John Wesley Powell, 1834-1902",
       "artist": "William Morris Davis",
+      "creator": "William Morris Davis",
       "duration": "N/A",
       "keyword": "energetic"
     },
@@ -249,6 +284,7 @@
       "identifier": "EDIS-SRP-0197-06",
       "title": "Ride of the Valkyries - from \"Die Valkyrie\"",
       "artist": "American Symphony Orchestra",
+      "creator": "American Symphony Orchestra",
       "duration": "N/A",
       "keyword": "energetic"
     },
@@ -256,6 +292,7 @@
       "identifier": "bleak_house_1705_librivox",
       "title": "Bleak House",
       "artist": "Charles Dickens",
+      "creator": "Charles Dickens",
       "duration": "N/A",
       "keyword": "energetic"
     },
@@ -263,6 +300,7 @@
       "identifier": "DontMakeExcuses",
       "title": "Les Brown motivational speech",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "energetic"
     },
@@ -270,6 +308,7 @@
       "identifier": "storyofapatriot_1310_librivox",
       "title": "100%: The Story of a Patriot",
       "artist": "Upton Sinclair",
+      "creator": "Upton Sinclair",
       "duration": "N/A",
       "keyword": "energetic"
     },
@@ -277,6 +316,7 @@
       "identifier": "torley_wong-wong_songs__1a_",
       "title": "Torley Wong - Wong Songs (1a)",
       "artist": "Torley Wong",
+      "creator": "Torley Wong",
       "duration": "N/A",
       "keyword": "energetic"
     }
@@ -286,6 +326,7 @@
       "identifier": "adventures_sally_0903",
       "title": "The Adventures of Sally",
       "artist": "P. G. Wodehouse",
+      "creator": "P. G. Wodehouse",
       "duration": "N/A",
       "keyword": "warm up"
     },
@@ -293,34 +334,31 @@
       "identifier": "pride_prejudice_krs_librivox",
       "title": "Pride and Prejudice (version 3)",
       "artist": "Jane Austen",
+      "creator": "Jane Austen",
       "duration": "N/A",
-      "keyword": "warm up"
-    },
-    {
-      "identifier": "OTRR_Box_13_Singles",
-      "title": "Box 13 - Single Episodes",
-      "artist": "Old Time Radio Researchers Group",
-      "duration": "26:35",
       "keyword": "warm up"
     },
     {
       "identifier": "ptc1978-11-18.flac16",
       "title": "The Jonestown Death Tape (FBI No. Q 042)",
       "artist": "The Rev. Jim Jones, et al. (The Peoples Temple cult)",
+      "creator": "The Rev. Jim Jones, et al. (The Peoples Temple cult)",
       "duration": "44:29",
+      "keyword": "warm up"
+    },
+    {
+      "identifier": "OTRR_Box_13_Singles",
+      "title": "Box 13 - Single Episodes",
+      "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
+      "duration": "26:35",
       "keyword": "warm up"
     },
     {
       "identifier": "OTRR_Gunsmoke_Singles",
       "title": "Gunsmoke - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
-      "duration": "N/A",
-      "keyword": "warm up"
-    },
-    {
-      "identifier": "story_mankind_0906",
-      "title": "The Story of Mankind",
-      "artist": "Hendrik van Loon",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "warm up"
     },
@@ -328,13 +366,15 @@
       "identifier": "looking-glass_1007",
       "title": "Through the Looking-Glass",
       "artist": "Lewis Carroll",
+      "creator": "Lewis Carroll",
       "duration": "N/A",
       "keyword": "warm up"
     },
     {
-      "identifier": "otr_bobandray",
-      "title": "Bob and Ray",
-      "artist": "Unknown Artist",
+      "identifier": "story_mankind_0906",
+      "title": "The Story of Mankind",
+      "artist": "Hendrik van Loon",
+      "creator": "Hendrik van Loon",
       "duration": "N/A",
       "keyword": "warm up"
     },
@@ -342,6 +382,15 @@
       "identifier": "alldayzzoundtrip",
       "title": "Ultimate Tunog Kalye (Tagay OPM Songs Plus 2021 Hits)",
       "artist": "Mr. Galit Sa Gwapo",
+      "creator": "Mr. Galit Sa Gwapo",
+      "duration": "N/A",
+      "keyword": "warm up"
+    },
+    {
+      "identifier": "otr_bobandray",
+      "title": "Bob and Ray",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "warm up"
     },
@@ -349,6 +398,7 @@
       "identifier": "uncle_remus_librivox",
       "title": "Uncle Remus, by Joel Chandler Harris",
       "artist": "Joel Chandler Harris",
+      "creator": "Joel Chandler Harris",
       "duration": "N/A",
       "keyword": "warm up"
     },
@@ -356,6 +406,7 @@
       "identifier": "relativity_librivox",
       "title": "Relativity: The Special and General Theory",
       "artist": "Albert Einstein",
+      "creator": "Albert Einstein",
       "duration": "N/A",
       "keyword": "stretching"
     },
@@ -363,6 +414,7 @@
       "identifier": "TheQunootCollection",
       "title": "The Qunoot Collection",
       "artist": "Maktabah Sound Studio",
+      "creator": "Maktabah Sound Studio",
       "duration": "N/A",
       "keyword": "stretching"
     },
@@ -370,6 +422,7 @@
       "identifier": "man_property_librivox",
       "title": "The Man of Property (Vol. 1 of The Forsyte Saga)",
       "artist": "John Galsworthy",
+      "creator": "John Galsworthy",
       "duration": "N/A",
       "keyword": "stretching"
     },
@@ -377,6 +430,7 @@
       "identifier": "in_chancery_0709_librivox",
       "title": "In Chancery (Vol. 2 of The Forsyte Saga)",
       "artist": "John Galsworthy",
+      "creator": "John Galsworthy",
       "duration": "N/A",
       "keyword": "stretching"
     },
@@ -384,6 +438,7 @@
       "identifier": "dangertrail_0910_librivox",
       "title": "The Danger Trail",
       "artist": "James Oliver Curwood",
+      "creator": "James Oliver Curwood",
       "duration": "N/A",
       "keyword": "stretching"
     },
@@ -391,6 +446,7 @@
       "identifier": "to_let_0709_librivox",
       "title": "To Let (Vol. 3 of The Forsyte Saga)",
       "artist": "John Galsworthy",
+      "creator": "John Galsworthy",
       "duration": "N/A",
       "keyword": "stretching"
     },
@@ -398,6 +454,7 @@
       "identifier": "summer-poolboy-benefits-4",
       "title": "Summer Poolboy Benefits",
       "artist": "Dawkinsblog",
+      "creator": "Dawkinsblog",
       "duration": "N/A",
       "keyword": "stretching"
     },
@@ -405,6 +462,7 @@
       "identifier": "atpointofbayonet_1506_librivox",
       "title": "At the Point of the Bayonet: A Tale of the Mahratta War",
       "artist": "G. A. Henty",
+      "creator": "G. A. Henty",
       "duration": "N/A",
       "keyword": "stretching"
     },
@@ -412,6 +470,7 @@
       "identifier": "open-mic-night-part-1",
       "title": "Married To A Goddess",
       "artist": "Dawkinsblog",
+      "creator": "Dawkinsblog",
       "duration": "N/A",
       "keyword": "stretching"
     },
@@ -419,6 +478,7 @@
       "identifier": "ten_minute_stories_2204_librivox",
       "title": "Ten Minute Stories",
       "artist": "Algernon Blackwood",
+      "creator": "Algernon Blackwood",
       "duration": "N/A",
       "keyword": "stretching"
     },
@@ -426,6 +486,7 @@
       "identifier": "great_expectations_mfs_0812_librivox",
       "title": "Great Expectations",
       "artist": "Charles Dickens",
+      "creator": "Charles Dickens",
       "duration": "N/A",
       "keyword": "gentle"
     },
@@ -433,6 +494,7 @@
       "identifier": "OTRR_Richard_Diamond_Private_Detective_Singles",
       "title": "Richard Diamond, Private Detective - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "gentle"
     },
@@ -440,6 +502,7 @@
       "identifier": "Our_Miss_Brooks_190_Episodes",
       "title": "Our Miss Brooks - 190 Episodes",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "gentle"
     },
@@ -447,6 +510,7 @@
       "identifier": "wind_in_the_willows_collab_librivox",
       "title": "The Wind in the Willows",
       "artist": "Kenneth Grahame",
+      "creator": "Kenneth Grahame",
       "duration": "N/A",
       "keyword": "gentle"
     },
@@ -454,13 +518,7 @@
       "identifier": "justwilliam_dw_librivox",
       "title": "Just William",
       "artist": "Richmal Crompton",
-      "duration": "N/A",
-      "keyword": "gentle"
-    },
-    {
-      "identifier": "simplemente_dario_0810_librivox",
-      "title": "Simplemente Dario",
-      "artist": "Ruben Dario",
+      "creator": "Richmal Crompton",
       "duration": "N/A",
       "keyword": "gentle"
     },
@@ -468,6 +526,23 @@
       "identifier": "wind_in_the_willows_solo",
       "title": "The Wind in the Willows",
       "artist": "Kenneth Grahame",
+      "creator": "Kenneth Grahame",
+      "duration": "N/A",
+      "keyword": "gentle"
+    },
+    {
+      "identifier": "simplemente_dario_0810_librivox",
+      "title": "Simplemente Dario",
+      "artist": "Ruben Dario",
+      "creator": "Ruben Dario",
+      "duration": "N/A",
+      "keyword": "gentle"
+    },
+    {
+      "identifier": "ghost_stories_antiquary_librivox",
+      "title": "Ghost Stories of an Antiquary",
+      "artist": "Montague Rhodes James",
+      "creator": "Montague Rhodes James",
       "duration": "N/A",
       "keyword": "gentle"
     },
@@ -475,20 +550,15 @@
       "identifier": "sleepsafecalmbeatinsomnia.peacefulmusicfordeepsleep.deltawaves",
       "title": "Sleep Safe & Calm Beat Insomnia. Peaceful Music For Deep Sleep. Delta Waves",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "meditation"
-    },
-    {
-      "identifier": "ghost_stories_antiquary_librivox",
-      "title": "Ghost Stories of an Antiquary",
-      "artist": "Montague Rhodes James",
-      "duration": "N/A",
-      "keyword": "gentle"
     },
     {
       "identifier": "3HOURSRomanticRelaxingSaxophoneMusic.HealingBackgroundForStressReliefStudyLoveCafe_201705",
       "title": "3 HOURS Romantic Relaxing Saxophone Music. Healing Background For Stress Relief, Study, Love, Cafe",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "meditation"
     },
@@ -496,6 +566,7 @@
       "identifier": "SoftPianoMusicSleepingMusic",
       "title": "pIANO",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "meditation"
     },
@@ -503,13 +574,7 @@
       "identifier": "the_way_of_peace_0901_librivox",
       "title": "The Way of Peace",
       "artist": "James Allen",
-      "duration": "N/A",
-      "keyword": "meditation"
-    },
-    {
-      "identifier": "RelaxingSleepMusic.DeltaWavesBinauralBeatsHealingForDeepSleepStressReliefMeditation",
-      "title": "Relaxing Sleep Music. Delta Waves Binaural Beats Healing For Deep Sleep Stress Relief Meditation",
-      "artist": "Unknown Artist",
+      "creator": "James Allen",
       "duration": "N/A",
       "keyword": "meditation"
     },
@@ -517,6 +582,15 @@
       "identifier": "leaves_of_grass_librivox",
       "title": "Leaves of Grass",
       "artist": "Walt Whitman",
+      "creator": "Walt Whitman",
+      "duration": "N/A",
+      "keyword": "meditation"
+    },
+    {
+      "identifier": "RelaxingSleepMusic.DeltaWavesBinauralBeatsHealingForDeepSleepStressReliefMeditation",
+      "title": "Relaxing Sleep Music. Delta Waves Binaural Beats Healing For Deep Sleep Stress Relief Meditation",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "meditation"
     },
@@ -524,6 +598,7 @@
       "identifier": "IndianBackgroundFluteMusicInstrumentalMeditationMusicYogaMusicSpaMusicForRelaxation",
       "title": "Indian Background Flute Music Instrumental Meditation Music Yoga Music Spa Music For Relaxation",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "meditation"
     },
@@ -531,6 +606,7 @@
       "identifier": "SleepMeditationCalming",
       "title": "Relaxation",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "meditation"
     },
@@ -538,6 +614,7 @@
       "identifier": "HappyMorningCafeMusicRelaxingJazzBossaNovaMusicForWorkStudyWakeUp",
       "title": "Happy Morning Cafe Music Relaxing Jazz Bossa Nova Music For Work Study Wake Up",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "meditation"
     },
@@ -545,22 +622,33 @@
       "identifier": "RelaxingHarpMusicSleepMusicMeditationMusicSpaMusicStudyMusicInstrumentalMusic49",
       "title": "Relaxing Harp Music Sleep Music, Meditation Music, Spa Music, Study Music, Instrumental Music ★ 49",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "meditation"
     }
   ],
   "boxe": [
     {
-      "identifier": "thirty_years_slave_1108_librivox",
-      "title": "Thirty Years A Slave",
-      "artist": "Louis Hughes",
+      "identifier": "the_abysmal_brute_2012_librivox",
+      "title": "The Abysmal Brute",
+      "artist": "Jack London",
+      "creator": "Jack London",
       "duration": "N/A",
       "keyword": "boxing"
     },
     {
-      "identifier": "the_abysmal_brute_2012_librivox",
-      "title": "The Abysmal Brute",
-      "artist": "Jack London",
+      "identifier": "thirty_years_slave_1108_librivox",
+      "title": "Thirty Years A Slave",
+      "artist": "Louis Hughes",
+      "creator": "Louis Hughes",
+      "duration": "N/A",
+      "keyword": "boxing"
+    },
+    {
+      "identifier": "TFR100-VA-TornFleshRecordsPresentsVestigialSickness",
+      "title": "TFR100 - VA - Torn Flesh Records Presents Vestigial Sickness",
+      "artist": "Torn Flesh Records",
+      "creator": "Torn Flesh Records",
       "duration": "N/A",
       "keyword": "boxing"
     },
@@ -568,20 +656,15 @@
       "identifier": "OTRR_Box_13_Singles",
       "title": "Box 13 - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "26:35",
       "keyword": "boxing"
     },
     {
-      "identifier": "TFR100-VA-TornFleshRecordsPresentsVestigialSickness",
-      "title": "TFR100 - VA - Torn Flesh Records Presents Vestigial Sickness",
-      "artist": "Torn Flesh Records",
-      "duration": "N/A",
-      "keyword": "boxing"
-    },
-    {
-      "identifier": "englishpod_all",
-      "title": "EnglishPod_All",
-      "artist": "Unknown Artist",
+      "identifier": "3storiesbygeraldvance_1409_librivox",
+      "title": "3 Science Fiction Stories by Gerald Vance",
+      "artist": "Gerald Vance",
+      "creator": "Gerald Vance",
       "duration": "N/A",
       "keyword": "boxing"
     },
@@ -589,13 +672,7 @@
       "identifier": "shorty_mccabe_1807_librivox",
       "title": "Shorty McCabe",
       "artist": "Sewell Ford",
-      "duration": "N/A",
-      "keyword": "boxing"
-    },
-    {
-      "identifier": "3storiesbygeraldvance_1409_librivox",
-      "title": "3 Science Fiction Stories by Gerald Vance",
-      "artist": "Gerald Vance",
+      "creator": "Sewell Ford",
       "duration": "N/A",
       "keyword": "boxing"
     },
@@ -603,6 +680,7 @@
       "identifier": "theset-up_2506_librivox",
       "title": "The Set-Up",
       "artist": "Joseph Moncure March",
+      "creator": "Joseph Moncure March",
       "duration": "N/A",
       "keyword": "boxing"
     },
@@ -610,6 +688,7 @@
       "identifier": "oa2001",
       "title": "2001 (WNEW)",
       "artist": "Opie & Anthony",
+      "creator": "Opie & Anthony",
       "duration": "N/A",
       "keyword": "boxing"
     },
@@ -617,6 +696,7 @@
       "identifier": "nonfiction016_librivox",
       "title": "Short Nonfiction Collection Vol. 016",
       "artist": "Various",
+      "creator": "Various",
       "duration": "N/A",
       "keyword": "boxing"
     },
@@ -624,34 +704,23 @@
       "identifier": "art_of_war_librivox",
       "title": "The Art of War",
       "artist": "Sun Tzu",
+      "creator": "Sun Tzu",
       "duration": "N/A",
       "keyword": "intense"
     },
     {
-      "identifier": "OTRR_Dragnet_Singles",
-      "title": "Dragnet - Single Episodes",
-      "artist": "Old Time Radio Researchers Group",
+      "identifier": "englishpod_all",
+      "title": "EnglishPod_All",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
-      "keyword": "intense"
+      "keyword": "boxing"
     },
     {
       "identifier": "count_montecristo_1308_librivox",
       "title": "The Count of Monte Cristo",
       "artist": "Alexandre Dumas",
-      "duration": "N/A",
-      "keyword": "intense"
-    },
-    {
-      "identifier": "returnsherlockholmes_v3_1507_librivox",
-      "title": "The Return of Sherlock Holmes (Version 3)",
-      "artist": "Sir Arthur Conan Doyle",
-      "duration": "N/A",
-      "keyword": "intense"
-    },
-    {
-      "identifier": "lord_jim_librivox",
-      "title": "Lord Jim",
-      "artist": "Joseph Conrad",
+      "creator": "Alexandre Dumas",
       "duration": "N/A",
       "keyword": "intense"
     },
@@ -659,6 +728,31 @@
       "identifier": "wuthering_heights_rg_librivox",
       "title": "Wuthering Heights (Solo Version)",
       "artist": "Emily Bronte",
+      "creator": "Emily Bronte",
+      "duration": "N/A",
+      "keyword": "intense"
+    },
+    {
+      "identifier": "OTRR_Dragnet_Singles",
+      "title": "Dragnet - Single Episodes",
+      "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
+      "duration": "N/A",
+      "keyword": "intense"
+    },
+    {
+      "identifier": "returnsherlockholmes_v3_1507_librivox",
+      "title": "The Return of Sherlock Holmes (Version 3)",
+      "artist": "Sir Arthur Conan Doyle",
+      "creator": "Sir Arthur Conan Doyle",
+      "duration": "N/A",
+      "keyword": "intense"
+    },
+    {
+      "identifier": "lord_jim_librivox",
+      "title": "Lord Jim",
+      "artist": "Joseph Conrad",
+      "creator": "Joseph Conrad",
       "duration": "N/A",
       "keyword": "intense"
     },
@@ -666,6 +760,7 @@
       "identifier": "thought_vibration_ap_librivox",
       "title": "Thought Vibration, or The Law of Attraction in the Thought",
       "artist": "William Walker Atkinson",
+      "creator": "William Walker Atkinson",
       "duration": "N/A",
       "keyword": "intense"
     },
@@ -673,6 +768,7 @@
       "identifier": "discoverers_and_explorers_0901_librivox",
       "title": "Discoverers and Explorers",
       "artist": "Edward R. Shaw",
+      "creator": "Edward R. Shaw",
       "duration": "N/A",
       "keyword": "intense"
     },
@@ -680,20 +776,15 @@
       "identifier": "ca015_va_cs",
       "title": "Various - Clinical Sounds - Vol.1 (ca015)",
       "artist": "Various",
+      "creator": "Various",
       "duration": "N/A",
       "keyword": "intense"
-    },
-    {
-      "identifier": "OTRR_Gunsmoke_Singles",
-      "title": "Gunsmoke - Single Episodes",
-      "artist": "Old Time Radio Researchers Group",
-      "duration": "N/A",
-      "keyword": "aggressive"
     },
     {
       "identifier": "nineinchnails_ghosts_I_IV",
       "title": "Ghosts I - IV",
       "artist": "Nine Inch Nails",
+      "creator": "Nine Inch Nails",
       "duration": "2:48",
       "keyword": "intense"
     },
@@ -701,6 +792,15 @@
       "identifier": "tarzan_apes_mfs",
       "title": "Tarzan of the Apes",
       "artist": "Edgar Rice Burroughs",
+      "creator": "Edgar Rice Burroughs",
+      "duration": "N/A",
+      "keyword": "aggressive"
+    },
+    {
+      "identifier": "OTRR_Gunsmoke_Singles",
+      "title": "Gunsmoke - Single Episodes",
+      "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "aggressive"
     },
@@ -708,6 +808,7 @@
       "identifier": "north_and_south_0709_librivox",
       "title": "North and South",
       "artist": "Elizabeth Gaskell",
+      "creator": "Elizabeth Gaskell",
       "duration": "N/A",
       "keyword": "aggressive"
     },
@@ -715,6 +816,7 @@
       "identifier": "OTRR_Dark_Fantasy_Singles",
       "title": "Dark Fantasy - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "aggressive"
     },
@@ -722,6 +824,7 @@
       "identifier": "ca270_pb",
       "title": "pandoras.box - Barriers (ca270)",
       "artist": "pandoras.box",
+      "creator": "pandoras.box",
       "duration": "N/A",
       "keyword": "aggressive"
     },
@@ -729,6 +832,7 @@
       "identifier": "space_prison_0911_librivox",
       "title": "Space Prison",
       "artist": "Tom Godwin",
+      "creator": "Tom Godwin",
       "duration": "N/A",
       "keyword": "aggressive"
     },
@@ -736,6 +840,7 @@
       "identifier": "OTRR_Damon_Runyon_Singles",
       "title": "The Damon Runyon Theatre - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "aggressive"
     },
@@ -743,6 +848,7 @@
       "identifier": "man_of_the_desert_2007_librivox",
       "title": "The Man of the Desert",
       "artist": "Grace Livingston Hill",
+      "creator": "Grace Livingston Hill",
       "duration": "N/A",
       "keyword": "aggressive"
     },
@@ -750,6 +856,7 @@
       "identifier": "storm_over_warlock_1012_librivox",
       "title": "Storm Over Warlock",
       "artist": "Andre Norton",
+      "creator": "Andre Norton",
       "duration": "N/A",
       "keyword": "aggressive"
     },
@@ -757,6 +864,7 @@
       "identifier": "two_years_lunatic_asylum_1110_librivox",
       "title": "Two Years and Four Months in a Lunatic Asylum",
       "artist": "Hiram Chase",
+      "creator": "Hiram Chase",
       "duration": "N/A",
       "keyword": "aggressive"
     },
@@ -764,6 +872,7 @@
       "identifier": "MisharyRasyidPerJuz",
       "title": "Mishary Rasyid per Juz full 30 Juz",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "power"
     },
@@ -771,6 +880,7 @@
       "identifier": "TvQuran.com__Maher",
       "title": "Maher Al-Muaiqly- TvQuran.com",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "power"
     },
@@ -778,13 +888,7 @@
       "identifier": "TvQuran.com__Al-Ajmy",
       "title": "TvQuran.com Ahmad Al-Ajmy",
       "artist": "Unknown Artist",
-      "duration": "N/A",
-      "keyword": "power"
-    },
-    {
-      "identifier": "TvQuran.com__Alafasi",
-      "title": "Mishary Alafasi",
-      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "power"
     },
@@ -792,6 +896,7 @@
       "identifier": "TvQuran.com__Fares.Abbad",
       "title": "Fares Abbad فارس عباد",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "power"
     },
@@ -799,6 +904,7 @@
       "identifier": "Mishary-Alafasy",
       "title": "Mishary-Alafasy",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "power"
     },
@@ -806,6 +912,7 @@
       "identifier": "moby_dick_librivox",
       "title": "Moby Dick, or the Whale",
       "artist": "Herman Melville",
+      "creator": "Herman Melville",
       "duration": "N/A",
       "keyword": "power"
     },
@@ -813,6 +920,7 @@
       "identifier": "TvQuran.com__basit_mjwd",
       "title": "Abdulbasit Abdulsamad (mojawad)",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "power"
     },
@@ -820,6 +928,15 @@
       "identifier": "TvQuran.com__Abkar",
       "title": "Abkar",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
+      "duration": "N/A",
+      "keyword": "power"
+    },
+    {
+      "identifier": "TvQuran.com__Alafasi",
+      "title": "Mishary Alafasi",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "power"
     },
@@ -827,6 +944,7 @@
       "identifier": "anthem_librivox",
       "title": "Anthem",
       "artist": "Ayn Rand",
+      "creator": "Ayn Rand",
       "duration": "N/A",
       "keyword": "power"
     },
@@ -834,6 +952,7 @@
       "identifier": "invisible_man_librivox",
       "title": "The Invisible Man",
       "artist": "H.G. Wells",
+      "creator": "H.G. Wells",
       "duration": "N/A",
       "keyword": "fight"
     },
@@ -841,6 +960,7 @@
       "identifier": "Forever.music.cafe.kimHyunWoo_63",
       "title": "Forever.music.Cafe.Kim hyun woo",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "fight"
     },
@@ -848,6 +968,7 @@
       "identifier": "OTRR_Philip_Marlowe_Singles",
       "title": "Adventures of Philip Marlowe - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "fight"
     },
@@ -855,6 +976,7 @@
       "identifier": "robinson_crusoe_1006_librivox",
       "title": "Robinson Crusoe",
       "artist": "Daniel DeFoe",
+      "creator": "Daniel DeFoe",
       "duration": "N/A",
       "keyword": "fight"
     },
@@ -862,6 +984,7 @@
       "identifier": "ptc1978-11-18.flac16",
       "title": "The Jonestown Death Tape (FBI No. Q 042)",
       "artist": "The Rev. Jim Jones, et al. (The Peoples Temple cult)",
+      "creator": "The Rev. Jim Jones, et al. (The Peoples Temple cult)",
       "duration": "44:29",
       "keyword": "fight"
     },
@@ -869,6 +992,7 @@
       "identifier": "lifeofmuhammadmakkah",
       "title": "The Life of Muhammad (saaw) - Makkan Period",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "fight"
     },
@@ -876,6 +1000,7 @@
       "identifier": "frederick-douglass_jf_librivox",
       "title": "Narrative of the Life of Frederick Douglass",
       "artist": "Frederick Douglass",
+      "creator": "Frederick Douglass",
       "duration": "N/A",
       "keyword": "fight"
     },
@@ -883,6 +1008,7 @@
       "identifier": "salammbo_1309_librivox",
       "title": "Salammbô",
       "artist": "Gustave Flaubert",
+      "creator": "Gustave Flaubert",
       "duration": "N/A",
       "keyword": "fight"
     },
@@ -890,6 +1016,7 @@
       "identifier": "villette_librivox",
       "title": "Villette",
       "artist": "Charlotte Brontë",
+      "creator": "Charlotte Brontë",
       "duration": "N/A",
       "keyword": "fight"
     }
@@ -899,6 +1026,7 @@
       "identifier": "jane_eyre_librivox",
       "title": "Jane Eyre",
       "artist": "Charlotte Brontë",
+      "creator": "Charlotte Brontë",
       "duration": "N/A",
       "keyword": "walking"
     },
@@ -906,13 +1034,7 @@
       "identifier": "moby_dick_librivox",
       "title": "Moby Dick, or the Whale",
       "artist": "Herman Melville",
-      "duration": "N/A",
-      "keyword": "walking"
-    },
-    {
-      "identifier": "Dragnet_OTR",
-      "title": "Dragnet the 50's radio show",
-      "artist": "Unknown Artist",
+      "creator": "Herman Melville",
       "duration": "N/A",
       "keyword": "walking"
     },
@@ -920,13 +1042,15 @@
       "identifier": "swiss_family_robinson_librivox",
       "title": "The Swiss Family Robinson",
       "artist": "Johann David Wyss",
+      "creator": "Johann David Wyss",
       "duration": "N/A",
       "keyword": "walking"
     },
     {
-      "identifier": "OTRR_Gunsmoke_Singles",
-      "title": "Gunsmoke - Single Episodes",
-      "artist": "Old Time Radio Researchers Group",
+      "identifier": "Dragnet_OTR",
+      "title": "Dragnet the 50's radio show",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "walking"
     },
@@ -934,13 +1058,7 @@
       "identifier": "broad_highway_1309_librivox",
       "title": "The Broad Highway",
       "artist": "John Jeffery Farnol",
-      "duration": "N/A",
-      "keyword": "walking"
-    },
-    {
-      "identifier": "OTRR_X_Minus_One_Singles",
-      "title": "X Minus One - Single Episodes",
-      "artist": "Old Time Radio Researchers Group",
+      "creator": "John Jeffery Farnol",
       "duration": "N/A",
       "keyword": "walking"
     },
@@ -948,6 +1066,23 @@
       "identifier": "OTRR_Philip_Marlowe_Singles",
       "title": "Adventures of Philip Marlowe - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
+      "duration": "N/A",
+      "keyword": "walking"
+    },
+    {
+      "identifier": "OTRR_X_Minus_One_Singles",
+      "title": "X Minus One - Single Episodes",
+      "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
+      "duration": "N/A",
+      "keyword": "walking"
+    },
+    {
+      "identifier": "OTRR_Gunsmoke_Singles",
+      "title": "Gunsmoke - Single Episodes",
+      "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "walking"
     },
@@ -955,6 +1090,15 @@
       "identifier": "illiad_0801_librivox3",
       "title": "The Iliad",
       "artist": "Homer",
+      "creator": "Homer",
+      "duration": "N/A",
+      "keyword": "walking"
+    },
+    {
+      "identifier": "OTRR_Whistler_Singles",
+      "title": "The Whistler - Single Episodes",
+      "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "walking"
     },
@@ -962,20 +1106,15 @@
       "identifier": "Saad_Al_Ghamdi-256-KBPS_up-by-muslem",
       "title": "256KBPS_المصحف المرتل للقارئ سعد الغامدي جودة عالية جدا",
       "artist": "uP_bY_mUSLEm-تم رفع هذه المادة بواسطة مسلم التونسي",
+      "creator": "uP_bY_mUSLEm-تم رفع هذه المادة بواسطة مسلم التونسي",
       "duration": "N/A",
       "keyword": "calm"
-    },
-    {
-      "identifier": "OTRR_Whistler_Singles",
-      "title": "The Whistler - Single Episodes",
-      "artist": "Old Time Radio Researchers Group",
-      "duration": "N/A",
-      "keyword": "walking"
     },
     {
       "identifier": "sleepsafecalmbeatinsomnia.peacefulmusicfordeepsleep.deltawaves",
       "title": "Sleep Safe & Calm Beat Insomnia. Peaceful Music For Deep Sleep. Delta Waves",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "calm"
     },
@@ -983,6 +1122,7 @@
       "identifier": "3HOURSRomanticRelaxingSaxophoneMusic.HealingBackgroundForStressReliefStudyLoveCafe_201705",
       "title": "3 HOURS Romantic Relaxing Saxophone Music. Healing Background For Stress Relief, Study, Love, Cafe",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "calm"
     },
@@ -990,6 +1130,7 @@
       "identifier": "the-fellowship-of-the-ring_soundscape-by-phil-dragash",
       "title": "Lord of The Rings: The Fellowship of the Ring - Soundscape by Phil Dragash",
       "artist": "Phil Dragash",
+      "creator": "Phil Dragash",
       "duration": "N/A",
       "keyword": "calm"
     },
@@ -997,6 +1138,7 @@
       "identifier": "ird059",
       "title": "The Conet Project - Recordings of Shortwave Numbers Stations [ird059]",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "calm"
     },
@@ -1004,6 +1146,7 @@
       "identifier": "NS050",
       "title": "Another Day, Another Way",
       "artist": "No-Source Netlabel",
+      "creator": "No-Source Netlabel",
       "duration": "N/A",
       "keyword": "calm"
     },
@@ -1011,6 +1154,7 @@
       "identifier": "ptc1978-11-18.flac16",
       "title": "The Jonestown Death Tape (FBI No. Q 042)",
       "artist": "The Rev. Jim Jones, et al. (The Peoples Temple cult)",
+      "creator": "The Rev. Jim Jones, et al. (The Peoples Temple cult)",
       "duration": "44:29",
       "keyword": "calm"
     },
@@ -1018,6 +1162,7 @@
       "identifier": "Roqia4u",
       "title": "رقية شرعية بصوت العديد من الشيوخ",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "calm"
     },
@@ -1025,6 +1170,7 @@
       "identifier": "KmartOctober1989",
       "title": "Kmart October 1989",
       "artist": "Tape-A-Thon",
+      "creator": "Tape-A-Thon",
       "duration": "N/A",
       "keyword": "calm"
     },
@@ -1032,6 +1178,7 @@
       "identifier": "RelaxingSleepMusic.DeltaWavesBinauralBeatsHealingForDeepSleepStressReliefMeditation",
       "title": "Relaxing Sleep Music. Delta Waves Binaural Beats Healing For Deep Sleep Stress Relief Meditation",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "calm"
     },
@@ -1039,6 +1186,7 @@
       "identifier": "TvQuran.com__Maher",
       "title": "Maher Al-Muaiqly- TvQuran.com",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "relaxing"
     },
@@ -1046,6 +1194,7 @@
       "identifier": "alice_in_wonderland_librivox",
       "title": "Alice's Adventures in Wonderland, by Lewis Carroll",
       "artist": "Lewis Carroll",
+      "creator": "Lewis Carroll",
       "duration": "N/A",
       "keyword": "relaxing"
     },
@@ -1053,6 +1202,7 @@
       "identifier": "huck_finn_librivox",
       "title": "Adventures of Huckleberry Finn",
       "artist": "Mark Twain",
+      "creator": "Mark Twain",
       "duration": "N/A",
       "keyword": "relaxing"
     },
@@ -1060,6 +1210,7 @@
       "identifier": "jane_eyre_ver03_0809_librivox",
       "title": "Jane Eyre (version 3)",
       "artist": "Charlotte Brontë",
+      "creator": "Charlotte Brontë",
       "duration": "N/A",
       "keyword": "relaxing"
     },
@@ -1067,13 +1218,7 @@
       "identifier": "maryamyusef7_",
       "title": "00",
       "artist": "Unknown Artist",
-      "duration": "N/A",
-      "keyword": "relaxing"
-    },
-    {
-      "identifier": "SoftPianoMusicSleepingMusic",
-      "title": "pIANO",
-      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "relaxing"
     },
@@ -1081,13 +1226,23 @@
       "identifier": "auboutdufil-archives",
       "title": "auboutdufil-archives",
       "artist": "auboutdufil",
+      "creator": "auboutdufil",
       "duration": "5:32",
+      "keyword": "relaxing"
+    },
+    {
+      "identifier": "SoftPianoMusicSleepingMusic",
+      "title": "pIANO",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
+      "duration": "N/A",
       "keyword": "relaxing"
     },
     {
       "identifier": "Quran-MP3-Ghamdi",
       "title": "Quran Recitation by Saad Al-Ghamdi",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "peaceful"
     },
@@ -1095,6 +1250,7 @@
       "identifier": "IndianBackgroundFluteMusicInstrumentalMeditationMusicYogaMusicSpaMusicForRelaxation",
       "title": "Indian Background Flute Music Instrumental Meditation Music Yoga Music Spa Music For Relaxation",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "peaceful"
     },
@@ -1102,6 +1258,7 @@
       "identifier": "RelaxingHarpMusicSleepMusicMeditationMusicSpaMusicStudyMusicInstrumentalMusic49",
       "title": "Relaxing Harp Music Sleep Music, Meditation Music, Spa Music, Study Music, Instrumental Music ★ 49",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "peaceful"
     },
@@ -1109,6 +1266,7 @@
       "identifier": "RelaxingSpaMusicCalmingMusicRelaxationMusicMeditationMusicInstrumentalMusic689",
       "title": "Relaxing Spa Music Calming Music Relaxation Music Meditation Music Instrumental Music ☯ 689",
       "artist": "lucian.avramoiu",
+      "creator": "lucian.avramoiu",
       "duration": "N/A",
       "keyword": "peaceful"
     },
@@ -1116,6 +1274,7 @@
       "identifier": "8HOURSOfRelaxingNatureMusicWithBirdsongMeditationWorkStudySleepRelaxation",
       "title": "8 HOURS Of Relaxing Nature Music With Birdsong Meditation, Work, Study, Sleep, Relaxation",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "peaceful"
     },
@@ -1123,15 +1282,17 @@
       "identifier": "grand_babylon_0808",
       "title": "The Grand Babylon Hotel",
       "artist": "Arnold Bennett",
+      "creator": "Arnold Bennett",
       "duration": "N/A",
       "keyword": "peaceful"
     }
   ],
   "musculation": [
     {
-      "identifier": "otr_cbsradiomysterytheater",
-      "title": "CBS Radio Mystery Theater",
-      "artist": "Unknown Artist",
+      "identifier": "mtk179",
+      "title": "Troupe - It's Really Pretty Simple After All [mtk179]",
+      "artist": "Troupe",
+      "creator": "Troupe",
       "duration": "N/A",
       "keyword": "workout"
     },
@@ -1139,13 +1300,15 @@
       "identifier": "15.-super-fitness-giant-workout-mix-132-bpm",
       "title": "15. Super Fitness Giant ( Workout Mix 132 BPM)",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "workout"
     },
     {
-      "identifier": "mtk179",
-      "title": "Troupe - It's Really Pretty Simple After All [mtk179]",
-      "artist": "Troupe",
+      "identifier": "otr_cbsradiomysterytheater",
+      "title": "CBS Radio Mystery Theater",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "workout"
     },
@@ -1153,6 +1316,7 @@
       "identifier": "DontMakeExcuses",
       "title": "Les Brown motivational speech",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "workout"
     },
@@ -1160,34 +1324,7 @@
       "identifier": "10PrastoThunderstormoriginalMixZzzz",
       "title": "3rd fitnes",
       "artist": "Unknown Artist",
-      "duration": "N/A",
-      "keyword": "workout"
-    },
-    {
-      "identifier": "WorkoutMotivationMusic",
-      "title": "Workout Motivation Music",
-      "artist": "Unknown Artist",
-      "duration": "N/A",
-      "keyword": "workout"
-    },
-    {
-      "identifier": "mn001",
-      "title": "[mn001] va - first",
-      "artist": "various",
-      "duration": "N/A",
-      "keyword": "workout"
-    },
-    {
-      "identifier": "TrihardistSpinningWorkout2-Cadence45Minutes",
-      "title": "Trihardist Spinning Workout 2 - Cadence (45 minutes)",
-      "artist": "Trihardist",
-      "duration": "N/A",
-      "keyword": "workout"
-    },
-    {
-      "identifier": "BestShortMotivationalSpeech",
-      "title": "Best Short Motivational Speech",
-      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "workout"
     },
@@ -1195,6 +1332,39 @@
       "identifier": "bleeptest",
       "title": "Bleep Test",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
+      "duration": "N/A",
+      "keyword": "workout"
+    },
+    {
+      "identifier": "WorkoutMotivationMusic",
+      "title": "Workout Motivation Music",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
+      "duration": "N/A",
+      "keyword": "workout"
+    },
+    {
+      "identifier": "mn001",
+      "title": "[mn001] va - first",
+      "artist": "various",
+      "creator": "various",
+      "duration": "N/A",
+      "keyword": "workout"
+    },
+    {
+      "identifier": "BestShortMotivationalSpeech",
+      "title": "Best Short Motivational Speech",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
+      "duration": "N/A",
+      "keyword": "workout"
+    },
+    {
+      "identifier": "TrihardistSpinningWorkout2-Cadence45Minutes",
+      "title": "Trihardist Spinning Workout 2 - Cadence (45 minutes)",
+      "artist": "Trihardist",
+      "creator": "Trihardist",
       "duration": "N/A",
       "keyword": "workout"
     },
@@ -1202,6 +1372,7 @@
       "identifier": "KumpulanCeramahAaGym",
       "title": "kumpulan ceramah Aa Gym",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "gym"
     },
@@ -1209,6 +1380,7 @@
       "identifier": "BacaanQuranTerjemahanIndonesia",
       "title": "Bacaan Murotal Quran dan Terjemahan Indonesia",
       "artist": "Muslim",
+      "creator": "Muslim",
       "duration": "N/A",
       "keyword": "gym"
     },
@@ -1216,6 +1388,7 @@
       "identifier": "middlemarch_0810_librivox",
       "title": "Middlemarch",
       "artist": "George Eliot",
+      "creator": "George Eliot",
       "duration": "N/A",
       "keyword": "gym"
     },
@@ -1223,13 +1396,7 @@
       "identifier": "curse_of_capistrano_1008",
       "title": "The Curse of Capistrano",
       "artist": "Johnston McCulley",
-      "duration": "N/A",
-      "keyword": "gym"
-    },
-    {
-      "identifier": "the_search_1912_librivox",
-      "title": "The Search",
-      "artist": "Grace Livingston Hill",
+      "creator": "Johnston McCulley",
       "duration": "N/A",
       "keyword": "gym"
     },
@@ -1237,20 +1404,15 @@
       "identifier": "KeluargaSakinah1",
       "title": "AA Gym",
       "artist": "www.neverblast.blogspot.com",
+      "creator": "www.neverblast.blogspot.com",
       "duration": "N/A",
       "keyword": "gym"
     },
     {
-      "identifier": "englishpod_all",
-      "title": "EnglishPod_All",
-      "artist": "Unknown Artist",
-      "duration": "N/A",
-      "keyword": "gym"
-    },
-    {
-      "identifier": "jay-shetty-kate-bosworth-on-how-to-bounce-back-from-hitting-exhaustion-spiritually-mentally",
-      "title": "Motivational Speeches and Podcasts",
-      "artist": "Unknown Artist",
+      "identifier": "the_search_1912_librivox",
+      "title": "The Search",
+      "artist": "Grace Livingston Hill",
+      "creator": "Grace Livingston Hill",
       "duration": "N/A",
       "keyword": "gym"
     },
@@ -1258,6 +1420,15 @@
       "identifier": "Kh.aaGym",
       "title": "KH.AA GYM",
       "artist": "@Rimadi",
+      "creator": "@Rimadi",
+      "duration": "N/A",
+      "keyword": "gym"
+    },
+    {
+      "identifier": "jay-shetty-kate-bosworth-on-how-to-bounce-back-from-hitting-exhaustion-spiritually-mentally",
+      "title": "Motivational Speeches and Podcasts",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "gym"
     },
@@ -1265,6 +1436,7 @@
       "identifier": "TvQuran.com__Alafasi",
       "title": "Mishary Alafasi",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "training"
     },
@@ -1272,13 +1444,23 @@
       "identifier": "SoftPianoMusicSleepingMusic",
       "title": "pIANO",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "training"
+    },
+    {
+      "identifier": "englishpod_all",
+      "title": "EnglishPod_All",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
+      "duration": "N/A",
+      "keyword": "gym"
     },
     {
       "identifier": "science_gettingrich_1005_librivox",
       "title": "The Science of Getting Rich",
       "artist": "Wallace D. Wattles",
+      "creator": "Wallace D. Wattles",
       "duration": "N/A",
       "keyword": "training"
     },
@@ -1286,6 +1468,7 @@
       "identifier": "64-kb---Quran--by--maher--almeaqli---604-part---full",
       "title": "مصحف القران مقسم صفحات المعيقلي بجودة 64 ك",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "training"
     },
@@ -1293,6 +1476,7 @@
       "identifier": "OTRR_X_Minus_One_Singles",
       "title": "X Minus One - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "training"
     },
@@ -1300,6 +1484,15 @@
       "identifier": "dream_psychology_librivox",
       "title": "Dream Psychology",
       "artist": "Sigmund Freud",
+      "creator": "Sigmund Freud",
+      "duration": "N/A",
+      "keyword": "training"
+    },
+    {
+      "identifier": "fighting_flying_circus_1104_librivox",
+      "title": "Fighting the Flying Circus",
+      "artist": "Eddie Rickenbacker",
+      "creator": "Eddie Rickenbacker",
       "duration": "N/A",
       "keyword": "training"
     },
@@ -1307,20 +1500,15 @@
       "identifier": "ptc1978-11-18.flac16",
       "title": "The Jonestown Death Tape (FBI No. Q 042)",
       "artist": "The Rev. Jim Jones, et al. (The Peoples Temple cult)",
+      "creator": "The Rev. Jim Jones, et al. (The Peoples Temple cult)",
       "duration": "44:29",
-      "keyword": "training"
-    },
-    {
-      "identifier": "fighting_flying_circus_1104_librivox",
-      "title": "Fighting the Flying Circus",
-      "artist": "Eddie Rickenbacker",
-      "duration": "N/A",
       "keyword": "training"
     },
     {
       "identifier": "elsieswidowhood_1412_librivox",
       "title": "Elsie's Widowhood",
       "artist": "Martha Finley",
+      "creator": "Martha Finley",
       "duration": "N/A",
       "keyword": "training"
     },
@@ -1328,6 +1516,7 @@
       "identifier": "dere_mable_rk_librivox",
       "title": "Dere Mable",
       "artist": "Edward Streeter",
+      "creator": "Edward Streeter",
       "duration": "N/A",
       "keyword": "training"
     },
@@ -1335,6 +1524,7 @@
       "identifier": "AdhaN_M_up-by-muslem",
       "title": "حمل و استمع الى الاذان بصوت العديد من الشيوخ من مختلف الدول الإسلامية",
       "artist": "تم رفع هذه المادة بواسطة مُسلم التونسي_uP_bY_mUSLEm",
+      "creator": "تم رفع هذه المادة بواسطة مُسلم التونسي_uP_bY_mUSLEm",
       "duration": "N/A",
       "keyword": "motivation"
     },
@@ -1342,6 +1532,7 @@
       "identifier": "geometry_dash_1.9",
       "title": "geometry_dash_1.9",
       "artist": "Pashok11",
+      "creator": "Pashok11",
       "duration": "N/A",
       "keyword": "motivation"
     },
@@ -1349,20 +1540,23 @@
       "identifier": "MLKDream",
       "title": "I Have a Dream, Martin Luther King Jr.",
       "artist": "Dr. Martin Luther King Jr.",
+      "creator": "Dr. Martin Luther King Jr.",
       "duration": "16:27",
-      "keyword": "motivation"
-    },
-    {
-      "identifier": "timemachine_sjm_librivox",
-      "title": "The Time Machine (version 3)",
-      "artist": "H. G. Wells",
-      "duration": "N/A",
       "keyword": "motivation"
     },
     {
       "identifier": "64kb--yaser--aldosry---quran--mp3---604--part---full",
       "title": "ياسر الدوسري مصحف مقسم صفحات",
       "artist": "شبكة ربيع الفردوس الاعلى",
+      "creator": "شبكة ربيع الفردوس الاعلى",
+      "duration": "N/A",
+      "keyword": "motivation"
+    },
+    {
+      "identifier": "timemachine_sjm_librivox",
+      "title": "The Time Machine (version 3)",
+      "artist": "H. G. Wells",
+      "creator": "H. G. Wells",
       "duration": "N/A",
       "keyword": "motivation"
     },
@@ -1370,6 +1564,7 @@
       "identifier": "3HOURSRomanticRelaxingSaxophoneMusic.HealingBackgroundForStressReliefStudyLoveCafe_201705",
       "title": "3 HOURS Romantic Relaxing Saxophone Music. Healing Background For Stress Relief, Study, Love, Cafe",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "motivation"
     },
@@ -1377,20 +1572,7 @@
       "identifier": "PretrajSarkarKiAarti",
       "title": "Aarti Songs",
       "artist": "Unknown Artist",
-      "duration": "N/A",
-      "keyword": "motivation"
-    },
-    {
-      "identifier": "puzser_youtube_podcast_2",
-      "title": "puzser_youtube_podcast_2",
-      "artist": "Unknown Artist",
-      "duration": "N/A",
-      "keyword": "motivation"
-    },
-    {
-      "identifier": "federalist_papers_librivox",
-      "title": "The Federalist Papers",
-      "artist": "Alexander Hamilton; John Jay; James Madison",
+      "creator": "Unknown Artist",
       "duration": "N/A",
       "keyword": "motivation"
     },
@@ -1398,13 +1580,31 @@
       "identifier": "prince_librivox",
       "title": "The Prince",
       "artist": "Nicolo Machiavelli; translated by W. K. Marriott",
+      "creator": "Nicolo Machiavelli; translated by W. K. Marriott",
       "duration": "N/A",
       "keyword": "fitness"
+    },
+    {
+      "identifier": "federalist_papers_librivox",
+      "title": "The Federalist Papers",
+      "artist": "Alexander Hamilton; John Jay; James Madison",
+      "creator": "Alexander Hamilton; John Jay; James Madison",
+      "duration": "N/A",
+      "keyword": "motivation"
+    },
+    {
+      "identifier": "puzser_youtube_podcast_2",
+      "title": "puzser_youtube_podcast_2",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
+      "duration": "N/A",
+      "keyword": "motivation"
     },
     {
       "identifier": "OTRR_Ranger_Bill_Singles",
       "title": "Ranger Bill - Single Episodes",
       "artist": "Old Time Radio Researchers Group",
+      "creator": "Old Time Radio Researchers Group",
       "duration": "N/A",
       "keyword": "fitness"
     },
@@ -1412,20 +1612,7 @@
       "identifier": "socialstatics_1705_librivox",
       "title": "Social Statics",
       "artist": "Herbert Spencer",
-      "duration": "N/A",
-      "keyword": "fitness"
-    },
-    {
-      "identifier": "motivational-speech",
-      "title": "Motivational Speech",
-      "artist": "Unknown Artist",
-      "duration": "N/A",
-      "keyword": "fitness"
-    },
-    {
-      "identifier": "ArabicAudioNasheeds",
-      "title": "Arabic Nasheeds,Nazams,Tarany (Audio) UPDATED",
-      "artist": "Arabic Brothers",
+      "creator": "Herbert Spencer",
       "duration": "N/A",
       "keyword": "fitness"
     },
@@ -1433,6 +1620,23 @@
       "identifier": "bobandraycompletecollection",
       "title": "Bob & Ray: The Complete Collection",
       "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
+      "duration": "N/A",
+      "keyword": "fitness"
+    },
+    {
+      "identifier": "motivational-speech",
+      "title": "Motivational Speech",
+      "artist": "Unknown Artist",
+      "creator": "Unknown Artist",
+      "duration": "N/A",
+      "keyword": "fitness"
+    },
+    {
+      "identifier": "ArabicAudioNasheeds",
+      "title": "Arabic Nasheeds,Nazams,Tarany (Audio) UPDATED",
+      "artist": "Arabic Brothers",
+      "creator": "Arabic Brothers",
       "duration": "N/A",
       "keyword": "fitness"
     }

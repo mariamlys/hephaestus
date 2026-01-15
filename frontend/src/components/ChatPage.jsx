@@ -1,9 +1,10 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState, useCallback, useEffect } from "react"
 import ChatBox from "./ChatBox"
 import PlaylistView from "./PlaylistView"
 import Sidebar from "./Sidebar"
+import { sendMessage, checkHealth } from "../services/api"
 
 function ChatPage() {
   const [messages, setMessages] = useState([
@@ -18,6 +19,20 @@ function ChatPage() {
   const [playlist, setPlaylist] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(true)
+  const [backendStatus, setBackendStatus] = useState("checking")
+
+  // Vérifier le statut du backend au chargement
+  useEffect(() => {
+    const checkBackend = async () => {
+      try {
+        const health = await checkHealth()
+        setBackendStatus(health.status === "ok" || health.status === "degraded" ? "connected" : "error")
+      } catch {
+        setBackendStatus("offline")
+      }
+    }
+    checkBackend()
+  }, [])
 
   const handleSendMessage = useCallback(async (userMessage) => {
     const newUserMessage = {
@@ -26,72 +41,90 @@ function ChatPage() {
       content: userMessage,
       timestamp: new Date(),
     }
-
+  
     setMessages((prev) => [...prev, newUserMessage])
     setIsLoading(true)
-
-    // Simulation (sera remplacé par l'appel API)
-    setTimeout(() => {
+  
+    try {
+      // Appel API réel
+      const response = await sendMessage(userMessage, messages.map(m => ({
+        role: m.type === "user" ? "user" : "assistant",
+        content: m.content
+      })))
+  
+      console.log("🔍 Réponse complète:", response)
+      console.log("🔍 Playlist:", response.playlist)
+      console.log("🔍 Playlist.playlist:", response.playlist?.playlist)
+  
+      // ✅ CORRECTION : Utiliser response.response au lieu de response.playlist.response
       const botResponse = {
         id: Date.now() + 1,
         type: "bot",
-        content: `Parfait ! J'analyse "${userMessage}" et je compose ta playlist personnalisée...`,
+        content: response.response || "J'ai créé ta playlist !",
         timestamp: new Date(),
       }
-
+  
       setMessages((prev) => [...prev, botResponse])
+  
+      // ✅ CORRECTION : Vérifier que playlist existe ET que playlist.playlist existe
+      if (response.playlist && Array.isArray(response.playlist.playlist) && response.playlist.playlist.length > 0) {
+        const backendPlaylist = response.playlist
+        
+        const sportToMood = {
+          "course_a_pied": "Énergique",
+          "boxe": "Intense",
+          "musculation": "Motivant",
+          "marche_a_pied": "Relaxant",
+          "echauffement": "Doux"
+        }
+  
+        const sportToGenre = {
+          "course_a_pied": "Running",
+          "boxe": "Power",
+          "musculation": "Workout",
+          "marche_a_pied": "Ambient",
+          "echauffement": "Chill"
+        }
+  
+        setPlaylist({
+          title: `Playlist ${backendPlaylist.sport.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}`,
+          description: `Composée par IA • ${backendPlaylist.track_count} morceaux • ${backendPlaylist.bpm_range} BPM`,
+          mood: sportToMood[backendPlaylist.sport] || "Énergique",
+          tracks: backendPlaylist.playlist.map((track, index) => ({
+            id: index + 1,
+            title: track.title || "Titre inconnu",
+            artist: track.artist || track.creator || "Artiste inconnu",
+            duration: track.duration || "3:00",
+            genre: sportToGenre[backendPlaylist.sport] || "Music",
+            cover: `/album-cover-${index % 5}.jpg`,
+            identifier: track.identifier,
+            preview_url: track.preview_url
+          }))
+        })
+        
+        console.log("✅ Playlist définie avec", backendPlaylist.playlist.length, "tracks")
+        console.log("📊 Première track:", backendPlaylist.playlist[0])
 
-      setPlaylist({
-        title: `Playlist ${userMessage}`,
-        description: "Composée par IA selon ton mood",
-        mood: "Energique",
-        tracks: [
-          {
-            id: 1,
-            title: "Electric Dreams",
-            artist: "Synthwave Masters",
-            duration: "3:45",
-            genre: "Electronic",
-            cover: "/album-cover-neon.jpg",
-          },
-          {
-            id: 2,
-            title: "Midnight Run",
-            artist: "Night Runners",
-            duration: "4:12",
-            genre: "Dance",
-            cover: "/dark-album-cover.png",
-          },
-          {
-            id: 3,
-            title: "Pulse",
-            artist: "Beat Architects",
-            duration: "3:30",
-            genre: "EDM",
-            cover: "/album-cover-abstract.jpg",
-          },
-          {
-            id: 4,
-            title: "Neon Lights",
-            artist: "City Sounds",
-            duration: "3:58",
-            genre: "Synthpop",
-            cover: "/album-cover-city.png",
-          },
-          {
-            id: 5,
-            title: "Velocity",
-            artist: "Tempo Rising",
-            duration: "4:05",
-            genre: "Electronic",
-            cover: "/album-cover-speed.jpg",
-          },
-        ],
-      })
-
+        console.log("✅ Playlist définie !")
+      } else {
+        console.log("❌ Pas de playlist à afficher")
+      }
+  
       setIsLoading(false)
-    }, 2500)
-  }, [])
+    } catch (error) {
+      console.error("Erreur:", error)
+      
+      const errorMessage = {
+        id: Date.now() + 1,
+        type: "bot",
+        content: `❌ Erreur: ${error.message}\n\n💡 Assure-toi que le backend est lancé sur http://localhost:8000`,
+        timestamp: new Date(),
+      }
+      
+      setMessages((prev) => [...prev, errorMessage])
+      setIsLoading(false)
+    }
+  }, [messages])
 
   const handleSuggestionClick = useCallback(
     (suggestion) => {
@@ -159,8 +192,14 @@ function ChatPage() {
 
             <div className="flex items-center gap-3">
               <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs text-white/60">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                Connecté
+                <span className={`w-2 h-2 rounded-full ${
+                  backendStatus === "connected" ? "bg-emerald-400 animate-pulse" :
+                  backendStatus === "checking" ? "bg-yellow-400 animate-pulse" :
+                  "bg-red-400"
+                }`}></span>
+                {backendStatus === "connected" ? "Connecté" :
+                 backendStatus === "checking" ? "Vérification..." :
+                 "Déconnecté"}
               </div>
             </div>
           </header>
