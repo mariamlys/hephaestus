@@ -106,7 +106,6 @@ function ChatBox({ messages, onSendMessage, isLoading }) {
           </div>
         ))}
 
-        {/* Typing indicator */}
         {isLoading && (
           <div className="flex gap-4 animate-fade-in-up">
             <div className="w-10 h-10 rounded-xl bg-gradient-accent flex items-center justify-center glow-sm">
@@ -141,7 +140,6 @@ function ChatBox({ messages, onSendMessage, isLoading }) {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input area */}
       <div className="p-4 border-t border-white/5 bg-black/20">
         <form onSubmit={handleSubmit} className="flex gap-3">
           <div className="flex-1 relative">

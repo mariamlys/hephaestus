@@ -7,10 +7,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Page d'accueil / Site vitrine */}
         <Route path="/" element={<LandingPage />} />
 
-        {/* Page du Chat */}
         <Route path="/chat" element={<ChatPage />} />
       </Routes>
     </Router>

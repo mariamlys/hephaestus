@@ -1,29 +1,10 @@
-/**
- * api.js - Service API pour communiquer avec le backend FastAPI
- * =============================================================
- * Service pour gérer toutes les communications avec le backend Hephaestus
- */
 
-// Configuration de l'URL du backend
 const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8000"
 
 /**
- * Envoie un message au chatbot et récupère la réponse avec playlist
- * @param {string} message - Le message de l'utilisateur
- * @param {Array} conversationHistory - Historique de la conversation (optionnel)
- * @returns {Promise<Object>} - La réponse du bot avec la playlist
- * 
- * Exemple de réponse:
- * {
- *   response: "🎵 Playlist 🏃 Course à pied...",
- *   playlist: {
- *     sport: "course_a_pied",
- *     target_duration_min: 60,
- *     playlist: [...],
- *     bpm_range: "140-180"
- *   },
- *   error: null
- * }
+ * @param {string}
+ * @param {Array}
+ * @returns {Promise<Object>}
  */
 export async function sendMessage(message, conversationHistory = []) {
   try {
@@ -41,7 +22,6 @@ export async function sendMessage(message, conversationHistory = []) {
     })
 
     if (!response.ok) {
-      // Gestion détaillée des erreurs HTTP
       const errorData = await response.json().catch(() => ({}))
       throw new Error(errorData.detail || `Erreur HTTP: ${response.status}`)
     }
@@ -54,7 +34,6 @@ export async function sendMessage(message, conversationHistory = []) {
   } catch (error) {
     console.error("❌ Erreur lors de l'envoi du message:", error)
     
-    // Vérifier si c'est une erreur réseau
     if (error.message.includes("Failed to fetch")) {
       throw new Error("❌ Backend inaccessible. Assure-toi que le serveur est lancé sur http://localhost:8000")
     }
@@ -64,15 +43,7 @@ export async function sendMessage(message, conversationHistory = []) {
 }
 
 /**
- * Récupère l'historique des conversations
- * @returns {Promise<Object>} - Historique des messages
- * 
- * Exemple de réponse:
- * {
- *   messages: [...],
- *   total: 25,
- *   showing: 25
- * }
+ * @returns {Promise<Object>}
  */
 export async function getHistory() {
   try {
@@ -92,7 +63,6 @@ export async function getHistory() {
   } catch (error) {
     console.error("❌ Erreur lors de la récupération de l'historique:", error)
     
-    // Retourner un objet vide plutôt que crasher
     return {
       messages: [],
       total: 0,
@@ -103,18 +73,7 @@ export async function getHistory() {
 }
 
 /**
- * Vérifie si le backend est en ligne et fonctionnel
- * @returns {Promise<Object>} - Status du backend
- * 
- * Exemple de réponse:
- * {
- *   status: "ok" | "degraded",
- *   components: {
- *     ollama: "ok" | "error",
- *     mcp: "ok" | "error",
- *     api: "ok"
- *   }
- * }
+ * @returns {Promise<Object>}
  */
 export async function checkHealth() {
   try {
@@ -159,17 +118,7 @@ export async function checkHealth() {
 }
 
 /**
- * Récupère la liste des catégories de sport disponibles
- * @returns {Promise<Array>} - Liste des catégories
- * 
- * Exemple de réponse:
- * [
- *   "course_a_pied",
- *   "boxe",
- *   "musculation",
- *   "marche_a_pied",
- *   "echauffement"
- * ]
+ * @returns {Promise<Array>} 
  */
 export async function getCategories() {
   try {
@@ -189,7 +138,6 @@ export async function getCategories() {
   } catch (error) {
     console.error("❌ Erreur lors de la récupération des catégories:", error)
     
-    // Retourner les catégories par défaut
     return [
       "course_a_pied",
       "boxe", 
@@ -201,8 +149,8 @@ export async function getCategories() {
 }
 
 /**
- * Récupère les informations de base de l'API
- * @returns {Promise<Object>} - Informations sur l'API
+ *
+ * @returns {Promise<Object>} 
  */
 export async function getApiInfo() {
   try {
@@ -238,8 +186,8 @@ export function formatMessage(role, content) {
 }
 
 /**
- * Utilitaire: Vérifie si le backend est disponible
- * @returns {Promise<boolean>} - true si disponible, false sinon
+ *
+ * @returns {Promise<boolean>} 
  */
 export async function isBackendAvailable() {
   try {
@@ -250,7 +198,6 @@ export async function isBackendAvailable() {
   }
 }
 
-// Export par défaut d'un objet contenant toutes les fonctions
 const api = {
   sendMessage,
   getHistory,

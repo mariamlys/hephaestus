@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-Scrapping pour Archive.org
+Scraper Archive.org V3 - Mots-clés musicaux précis
+==================================================
+Utilise des genres et artistes spécifiques pour chaque sport
 """
 
 import requests
@@ -12,43 +14,55 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 class ArchiveMusicScraper:
-    """Scraper pour récupérer les musiques d'Archive.org par catégorie"""
 
     def __init__(self):
         self.base_url = "https://archive.org"
         self.search_url = "https://archive.org/advancedsearch.php"
         self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         }
 
-        # Catégories de sport à scraper
         self.sport_categories = {
-            "course_a_pied": ["running", "jogging", "cardio", "energetic"],
-            "echauffement": ["warm up", "stretching", "gentle", "meditation"],
-            "boxe": ["boxing", "intense", "aggressive", "power", "fight"],
-            "marche_a_pied": ["walking", "calm", "relaxing", "peaceful"],
-            "musculation": ["workout", "gym", "training", "motivation", "fitness"]
+            "course_a_pied": [
+                "uplifting trance", "progressive house", "big room",
+                "energetic techno", "festival edm", "upbeat electronic"
+            ],
+            "echauffement": [
+                "ambient meditation", "chillout lounge", "soft piano",
+                "relaxing acoustic", "calm instrumental", "yoga music"
+            ],
+            "boxe": [
+                "aggressive hip hop", "hard rock anthems", "metal workout",
+                "trap beats", "hardcore punk", "intense drum and bass"
+            ],
+            "marche_a_pied": [
+                "indie folk acoustic", "light jazz", "easy listening",
+                "soft pop", "acoustic guitar instrumental", "bossa nova"
+            ],
+            "musculation": [
+                "gym motivation music", "workout rock", "powerful metal",
+                "epic orchestral", "heavy bass trap", "motivational rap"
+            ]
         }
+        
+        self.MIN_DURATION = 120
+        self.MAX_DURATION = 420
 
-    def search_music(self, keywords: List[str], max_results: int = 10) -> List[Dict]:
-        """
-        Cherche des musiques sur Archive.org selon des mots-clés
-        """
-        all_tracks = []
+    def search_music(self, keywords: List[str], max_results: int = 15) -> List[Dict]:
+        """Cherche des collections musicales"""
+        all_items = []
 
         for keyword in keywords:
             try:
-                # Paramètres de recherche Archive.org
                 params = {
-                    'q': f'{keyword} AND mediatype:audio',
-                    'fl[]': ['identifier', 'title', 'creator', 'date', 'downloads'],
+                    'q': f'({keyword}) AND mediatype:audio AND subject:(music OR electronic OR rock OR hip-hop)',
+                    'fl[]': ['identifier', 'title', 'creator', 'downloads', 'subject'],
                     'sort[]': 'downloads desc',
                     'rows': max_results,
-                    'page': 1,
                     'output': 'json'
                 }
 
-                print(f"🔍 Recherche: '{keyword}'", end=' ')
+                print(f"  🔍 '{keyword}'", end=' ')
                 response = requests.get(
                     self.search_url, 
                     params=params, 
@@ -60,243 +74,229 @@ class ArchiveMusicScraper:
                 data = response.json()
 
                 if 'response' in data and 'docs' in data['response']:
-                    docs = data['response']['docs'][:max_results]
-                    print(f"→ {len(docs)} résultats")
+                    docs = data['response']['docs']
+                    print(f"→ {len(docs)} collections")
                     
                     for doc in docs:
-                        try:
-                            track_info = self._process_item(doc, keyword)
-                            if track_info:
-                                all_tracks.append(track_info)
-                        except Exception as e:
-                            print(f"⚠️ Erreur item: {e}")
-                            continue
+                        identifier = doc.get('identifier')
+                        if identifier:
+                            all_items.append({
+                                'identifier': identifier,
+                                'title': doc.get('title', 'Unknown'),
+                                'creator': doc.get('creator', ['Unknown'])[0] if isinstance(doc.get('creator'), list) else doc.get('creator', 'Unknown'),
+                                'keyword': keyword
+                            })
                 else:
-                    print("→ 0 résultats")
+                    print("→ 0")
 
-                # Délai pour être respectueux du serveur
-                time.sleep(1)
+                time.sleep(0.3)
 
-            except requests.exceptions.RequestException as e:
-                print(f"❌ Erreur réseau pour '{keyword}': {e}")
-                continue
             except Exception as e:
-                print(f"⚠️ Erreur pour '{keyword}': {e}")
+                print(f"❌ {e}")
                 continue
 
-        return all_tracks
+        return all_items
 
-    def _process_item(self, doc: Dict, keyword: str) -> Optional[Dict]:
+    def extract_tracks_from_collection(self, item: Dict, sport_key: str) -> List[Dict]:
         """
-        Traite un item de résultat Archive.org et extrait les infos
-        """
-        try:
-            identifier = doc.get('identifier', '')
-            if not identifier:
-                return None
-
-            title = doc.get('title', 'Unknown')
-            creator = doc.get('creator', 'Unknown Artist')
-
-            # Gestion des listes
-            if isinstance(title, list):
-                title = title[0] if title else 'Unknown'
-            if isinstance(creator, list):
-                creator = creator[0] if creator else 'Unknown Artist'
-
-            return {
-                'identifier': identifier,
-                'title': title,
-                'artist': creator,
-                'creator': creator,  # Ajouter aussi 'creator' pour compatibilité
-                'duration': 'N/A',
-                'keyword': keyword
-            }
-
-        except Exception as e:
-            print(f"⚠️ Erreur extraction: {e}")
-            return None
-
-    def fetch_duration(self, track: Dict) -> Dict:
-        """
-        Récupère la durée réelle d'une piste depuis les métadonnées
+        Extrait les pistes individuelles
         """
         try:
-            identifier = track['identifier']
+            identifier = item['identifier']
             metadata_url = f"{self.base_url}/metadata/{identifier}"
             
             response = requests.get(metadata_url, headers=self.headers, timeout=10)
             response.raise_for_status()
             
             metadata = response.json()
-            
-            # Chercher les fichiers audio
             files = metadata.get('files', [])
+            
             audio_files = [
                 f for f in files 
-                if f.get('format', '').lower() in ['mp3', 'ogg', 'vorbis', 'flac']
+                if f.get('format', '').lower() in ['mp3', '128kb mp3', 'vbr mp3', 'ogg vorbis']
             ]
             
-            if audio_files:
-                # Prendre le premier MP3 ou le premier fichier audio
-                audio_file = next(
-                    (f for f in audio_files if f.get('format', '').lower() == 'mp3'),
-                    audio_files[0]
-                )
-                
-                # Récupérer la durée
-                length = audio_file.get('length')
-                if length:
-                    # Convertir en format MM:SS
-                    try:
-                        seconds = float(length)
-                        minutes = int(seconds // 60)
-                        secs = int(seconds % 60)
-                        track['duration'] = f"{minutes}:{secs:02d}"
-                    except:
-                        track['duration'] = str(length)
+            tracks = []
             
-            return track
+            for audio_file in audio_files:
+                length = audio_file.get('length')
+                if not length:
+                    continue
+                
+                try:
+                    duration_seconds = float(length)
+                except:
+                    continue
+                
+                if sport_key in ['musculation', 'boxe']:
+                    if duration_seconds < self.MIN_DURATION or duration_seconds > 420:
+                        continue
+                else:
+                    if duration_seconds < self.MIN_DURATION or duration_seconds > 360:
+                        continue
+                
+                minutes = int(duration_seconds // 60)
+                seconds = int(duration_seconds % 60)
+                duration_formatted = f"{minutes}:{seconds:02d}"
+                
+                filename = audio_file.get('name', '')
+                
+                track_title = filename.replace('.mp3', '').replace('.ogg', '')
+                track_title = track_title.replace('_', ' ').replace('-', ' ')
+                track_title = ' '.join(track_title.split())
+                
+                if not track_title or len(track_title) < 3:
+                    track_title = item['title']
+                
+                file_url = f"https://archive.org/download/{identifier}/{filename.replace(' ', '%20')}"
+                
+                tracks.append({
+                    'identifier': f"{identifier}_{filename}",
+                    'collection_id': identifier,
+                    'title': track_title[:80],
+                    'artist': item['creator'][:50] if item['creator'] else 'Unknown Artist',
+                    'duration': duration_formatted,
+                    'duration_seconds': duration_seconds,
+                    'keyword': item['keyword'],
+                    'preview_url': f"https://archive.org/details/{identifier}",
+                    'stream_url': file_url,
+                    'format': audio_file.get('format', 'mp3')
+                })
+            
+            return tracks
             
         except Exception as e:
-            # En cas d'erreur, on garde 'N/A'
-            return track
+            return []
 
-    def enrich_with_durations(self, tracks: List[Dict], max_workers: int = 5) -> List[Dict]:
-        """
-        Enrichit les pistes avec leurs durées en parallèle
-        """
-        print("\n   📊 Récupération des durées...", end=' ')
+    def scrape_category(self, category: str, keywords: List[str], target_tracks: int = 25) -> List[Dict]:
+        """Scrape une catégorie avec les nouveaux mots-clés"""
+        print(f"\n{'=' * 70}")
+        print(f"📂 {category.upper().replace('_', ' ')}")
+        print(f"{'=' * 70}")
         
-        enriched_tracks = []
+        collections = self.search_music(keywords, max_results=10)
         
-        # Traitement parallèle pour aller plus vite
-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            futures = {executor.submit(self.fetch_duration, track): track for track in tracks}
+        if not collections:
+            print(f"  ❌ Aucune collection")
+            return []
+        
+        all_tracks = []
+        print(f"\n  🎵 Extraction des pistes...")
+        
+        for item in collections:
+            if len(all_tracks) >= target_tracks:
+                break
             
-            for future in as_completed(futures):
-                try:
-                    enriched_track = future.result()
-                    enriched_tracks.append(enriched_track)
-                except Exception as e:
-                    # Si erreur, on garde la piste sans durée
-                    enriched_tracks.append(futures[future])
+            print(f"     • {item['title'][:45]}...", end=' ')
+            tracks = self.extract_tracks_from_collection(item, category)
+            
+            if tracks:
+                print(f"✓ {len(tracks)}")
+                all_tracks.extend(tracks)
+            else:
+                print("✗")
+            
+            time.sleep(0.3)
         
-        print("✓")
-        return enriched_tracks
+        seen_titles = set()
+        unique_tracks = []
+        
+        for track in all_tracks:
+            title_key = f"{track['title'].lower()[:40]}_{track['duration']}"
+            if title_key not in seen_titles:
+                seen_titles.add(title_key)
+                unique_tracks.append(track)
+                
+                if len(unique_tracks) >= target_tracks:
+                    break
+        
+        print(f"\n  ✅ {len(unique_tracks)} pistes extraites")
+        
+        if unique_tracks:
+            print(f"\n  📊 Échantillon:")
+            for track in unique_tracks[:4]:
+                print(f"     • {track['title'][:40]} - {track['artist'][:25]} ({track['duration']})")
+        
+        return unique_tracks
 
-    def scrape_all_categories(
-        self, 
-        tracks_per_category: int = 10,
-        fetch_durations: bool = True
-    ) -> Dict:
-        """
-        Scrape toutes les catégories de sport
-        """
+    def scrape_all_categories(self, tracks_per_category: int = 25) -> Dict:
+        """Scrape toutes les catégories"""
         all_data = {}
 
         for category, keywords in self.sport_categories.items():
-            print(f"\n{'=' * 60}")
-            print(f"📂 Catégorie: {category.upper().replace('_', ' ')}")
-            print(f"{'=' * 60}")
-
-            # Recherche des pistes
-            tracks = self.search_music(keywords, max_results=tracks_per_category)
-
-            # Déduplique par identifier
-            unique_tracks = []
-            seen_ids = set()
-            for track in tracks:
-                if track['identifier'] not in seen_ids:
-                    unique_tracks.append(track)
-                    seen_ids.add(track['identifier'])
-
-            # Enrichissement avec les durées
-            if fetch_durations and unique_tracks:
-                unique_tracks = self.enrich_with_durations(unique_tracks)
-
-            all_data[category] = unique_tracks
-            print(f"  ✅ {len(unique_tracks)} pistes trouvées\n")
-
-            # Pause entre catégories
-            time.sleep(2)
+            tracks = self.scrape_category(category, keywords, tracks_per_category)
+            all_data[category] = tracks
+            time.sleep(1.5)
 
         return all_data
 
     def save_to_json(self, data: Dict, filename: str = None):
-        """Sauvegarde les données dans un fichier JSON"""
+        """Sauvegarde les données"""
         if filename is None:
-            # Détection automatique du chemin correct
-            current_dir = os.path.dirname(os.path.abspath(__file__))
-            
-            # Si on est dans app/tools/, remonter de 2 niveaux vers backend/
-            if 'app' in current_dir and 'tools' in current_dir:
-                base_dir = os.path.dirname(os.path.dirname(current_dir))
+            if os.path.exists('data'):
+                filename = 'data/archive_music_data.json'
+            elif os.path.exists('../data'):
+                filename = '../data/archive_music_data.json'
             else:
-                # Sinon on est déjà dans backend/
-                base_dir = current_dir
-            
-            # Créer le dossier data/ s'il n'existe pas
-            data_dir = os.path.join(base_dir, "data")
-            os.makedirs(data_dir, exist_ok=True)
-            
-            filename = os.path.join(data_dir, "archive_music_data.json")
+                filename = 'archive_music_data.json'
         
-        # Sauvegarder
+        os.makedirs(os.path.dirname(filename) if os.path.dirname(filename) else '.', exist_ok=True)
+        
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         
-        print(f"\n✅ Données sauvegardées dans: {filename}")
-        print(f"📁 Taille du fichier: {os.path.getsize(filename) / 1024:.1f} KB")
+        print(f"\n💾 Sauvegardé: {os.path.abspath(filename)}")
+        print(f"📦 Taille: {os.path.getsize(filename) / 1024:.1f} KB")
 
 
 def main():
-    """Fonction principale pour lancer le scraping"""
-    print("🎵 " + "=" * 58)
-    print("   SCRAPER ARCHIVE.ORG - Musiques Sport & Fitness")
-    print("=" * 62 + "\n")
+    print("\n" + "🎵 " + "=" * 68)
+    print("   SCRAPER V3 - Mots-clés musicaux PRÉCIS")
+    print("=" * 72 + "\n")
 
     scraper = ArchiveMusicScraper()
 
-    print("🚀 Démarrage du scraping complet (avec durées)...\n")
+    print("🚀 Démarrage du scraping avec mots-clés optimisés...\n")
+    print("ℹ️  Genres musicaux spécifiques par sport")
+    print("ℹ️  Filtrage intelligent des durées\n")
 
-    # Scrape toutes les catégories avec durées
-    music_data = scraper.scrape_all_categories(
-        tracks_per_category=10,
-        fetch_durations=True
-    )
+    music_data = scraper.scrape_all_categories(tracks_per_category=25)
 
-    # Sauvegarde en JSON
     scraper.save_to_json(music_data)
 
-    # Affiche un résumé
-    print("\n" + "=" * 62)
+    print("\n" + "=" * 72)
     print("📊 RÉSUMÉ FINAL:")
-    print("=" * 62)
+    print("=" * 72)
+    
     total_tracks = sum(len(tracks) for tracks in music_data.values())
-    print(f"🎵 Total de pistes: {total_tracks}")
-    print()
+    total_duration = sum(
+        sum(t.get('duration_seconds', 0) for t in tracks) 
+        for tracks in music_data.values()
+    )
+    
+    print(f"   🎵 Total: {total_tracks} pistes")
+    print(f"   ⏱️  Durée: {int(total_duration / 60)} min\n")
     
     for category, tracks in music_data.items():
-        category_name = category.replace('_', ' ').title()
-        print(f"  {category_name:25} : {len(tracks):3} pistes")
-    print("=" * 62)
-
-    # Affiche quelques exemples
-    if total_tracks > 0:
-        print("\n💿 Exemples de pistes trouvées:")
-        print("-" * 62)
-        for category, tracks in list(music_data.items())[:2]:
-            if tracks:
-                print(f"\n{category.replace('_', ' ').upper()}:")
-                for track in tracks[:3]:
-                    duration = track.get('duration', 'N/A')
-                    print(f"   • {track['title']} - {track['artist']} ({duration})")
-        print("-" * 62)
+        if tracks:
+            avg_duration = sum(t.get('duration_seconds', 0) for t in tracks) / len(tracks)
+            category_name = category.replace('_', ' ').title()
+            print(f"   {category_name:25} : {len(tracks):2} pistes (moy: {int(avg_duration)}s)")
     
-    print("\n✅ Scraping terminé avec succès !\n")
+    print("=" * 72)
+    
+    print("\n📝 EXEMPLES PAR CATÉGORIE:")
+    print("-" * 72)
+    for category, tracks in music_data.items():
+        if tracks:
+            print(f"\n   {category.replace('_', ' ').upper()}:")
+            for track in tracks[:2]:
+                print(f"   • {track['title'][:45]} ({track['duration']})")
+    print("-" * 72)
+    
+    print("\n✅ Scraping terminé !")
+    print("💡 Musique maintenant adaptée aux sports\n")
 
 
 if __name__ == "__main__":
     main()
-

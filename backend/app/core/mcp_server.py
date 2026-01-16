@@ -12,16 +12,9 @@ import os
 
 
 class SportMusicMCPServer:
-    """Serveur MCP pour recommandations musique/sport basé sur Archive.org"""
     
     def __init__(self, data_file: str = None):
-        """
-        Initialise le serveur MCP
-        
-        Args:
-            data_file: Chemin vers le fichier JSON de données musicales
-                      Si None, utilise le chemin par défaut relatif
-        """
+
         if data_file is None:
             # Chemin relatif depuis app/core/mcp_server.py
             # Va chercher dans backend/data/archive_music_data.json
@@ -71,7 +64,6 @@ class SportMusicMCPServer:
         }
     
     def _load_music_data(self) -> Dict:
-        """Charge les données musicales depuis le fichier JSON"""
         try:
             if not os.path.exists(self.data_file):
                 print(f"⚠️  Fichier {self.data_file} non trouvé.")
@@ -107,15 +99,7 @@ class SportMusicMCPServer:
         }
     
     def _parse_duration(self, duration_str: str) -> int:
-        """
-        Convertit une durée "3:45" ou "3.5" en secondes
-        
-        Args:
-            duration_str: Durée au format "MM:SS" ou nombre
-            
-        Returns:
-            Durée en secondes (180 par défaut si erreur)
-        """
+
         try:
             if ':' in str(duration_str):
                 parts = str(duration_str).split(':')
@@ -149,18 +133,7 @@ class SportMusicMCPServer:
         duration_minutes: int = 60,
         shuffle: bool = True
     ) -> dict:
-        """
-        Crée une playlist personnalisée pour un sport donné
-        
-        Args:
-            sport: Type de sport (course_a_pied, boxe, musculation, etc.)
-            duration_minutes: Durée cible de la playlist en minutes
-            shuffle: Si True, mélange les pistes aléatoirement
-            
-        Returns:
-            Dict contenant la playlist et les métadonnées
-        """
-        # Normalise le nom du sport
+
         sport = sport.lower().replace(" ", "_").replace("à", "a").replace("é", "e")
         
         if sport not in self.music_data:
@@ -237,15 +210,7 @@ class SportMusicMCPServer:
         }
     
     async def get_sport_info(self, sport: str) -> dict:
-        """
-        Récupère les informations complètes sur un sport
-        
-        Args:
-            sport: Type de sport
-            
-        Returns:
-            Dict avec infos BPM, description, nombre de pistes
-        """
+
         sport = sport.lower().replace(" ", "_").replace("à", "a").replace("é", "e")
         
         if sport not in self.sport_bpm:
@@ -270,17 +235,7 @@ class SportMusicMCPServer:
         sport: Optional[str] = None, 
         limit: int = 20
     ) -> dict:
-        """
-        Cherche des musiques par mot-clé
-        
-        Args:
-            keyword: Mot-clé à rechercher
-            sport: Catégorie optionnelle pour limiter la recherche
-            limit: Nombre max de résultats
-            
-        Returns:
-            Dict avec les résultats de recherche
-        """
+
         keyword_lower = keyword.lower()
         results = []
         
@@ -319,12 +274,7 @@ class SportMusicMCPServer:
         }
     
     async def list_categories(self) -> dict:
-        """
-        Liste toutes les catégories de sport disponibles avec statistiques
-        
-        Returns:
-            Dict avec la liste des catégories et leurs stats
-        """
+
         categories = []
         
         for sport, tracks in self.music_data.items():
@@ -347,15 +297,7 @@ class SportMusicMCPServer:
         }
     
     async def get_random_track(self, sport: str) -> dict:
-        """
-        Récupère une piste aléatoire pour un sport
-        
-        Args:
-            sport: Type de sport
-            
-        Returns:
-            Dict avec une piste aléatoire
-        """
+
         sport = sport.lower().replace(" ", "_").replace("à", "a").replace("é", "e")
         
         if sport not in self.music_data or not self.music_data[sport]:
@@ -375,15 +317,7 @@ class SportMusicMCPServer:
         }
     
     async def get_track_details(self, identifier: str) -> dict:
-        """
-        Récupère les détails complets d'une piste via son identifier
-        
-        Args:
-            identifier: Identifier Archive.org de la piste
-            
-        Returns:
-            Dict avec les détails de la piste
-        """
+ 
         for category, tracks in self.music_data.items():
             for track in tracks:
                 if track.get('identifier') == identifier:
@@ -403,15 +337,7 @@ class SportMusicMCPServer:
         }
     
     async def handle_request(self, request: dict) -> dict:
-        """
-        Traite une requête MCP standard
-        
-        Args:
-            request: Requête MCP au format JSON
-            
-        Returns:
-            Réponse MCP
-        """
+
         method = request.get("method")
         params = request.get("params", {})
         

@@ -2,12 +2,13 @@
 
 import { useState } from "react"
 
-function PlaylistView({ playlist }) {
-  const [playingTrack, setPlayingTrack] = useState(null)
+function PlaylistView({ playlist, onPlayTrack, currentTrackId }) {
   const [hoveredTrack, setHoveredTrack] = useState(null)
 
-  const handlePlayTrack = (trackId) => {
-    setPlayingTrack(playingTrack === trackId ? null : trackId)
+  const handlePlayClick = (track, index) => {
+    if (onPlayTrack) {
+      onPlayTrack(track, index)
+    }
   }
 
   const getGradientStyle = (index) => {
@@ -26,7 +27,6 @@ function PlaylistView({ playlist }) {
   const totalDuration = playlist.tracks.reduce((acc, track) => {
     const duration = track.duration
     
-    // Ignorer les durées "N/A"
     if (!duration || duration === "N/A") {
       return acc
     }
@@ -115,13 +115,13 @@ function PlaylistView({ playlist }) {
       <div className="flex-1 overflow-y-auto px-4 pb-4">
         <div className="space-y-1">
           {playlist.tracks.map((track, index) => {
-            const isPlaying = playingTrack === track.id
+            const isPlaying = currentTrackId === track.id
             const isHovered = hoveredTrack === track.id
 
             return (
               <div
                 key={track.id}
-                onClick={() => handlePlayTrack(track.id)}
+                onClick={() => handlePlayClick(track, index)}
                 onMouseEnter={() => setHoveredTrack(track.id)}
                 onMouseLeave={() => setHoveredTrack(null)}
                 className={
@@ -200,7 +200,10 @@ function PlaylistView({ playlist }) {
 
       <div className="p-4 border-t border-white/5 bg-black/20">
         <div className="flex gap-3">
-          <button className="flex-1 flex items-center justify-center gap-2 py-3 bg-gradient-primary hover:opacity-90 text-white rounded-xl font-medium text-sm transition-all glow-sm">
+          <button 
+            onClick={() => playlist.tracks.length > 0 && handlePlayClick(playlist.tracks[0], 0)}
+            className="flex-1 flex items-center justify-center gap-2 py-3 bg-gradient-primary hover:opacity-90 text-white rounded-xl font-medium text-sm transition-all glow-sm"
+          >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <polygon points="5,3 19,12 5,21" />
             </svg>

@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from "react"
 import ChatBox from "./ChatBox"
 import PlaylistView from "./PlaylistView"
 import Sidebar from "./Sidebar"
+import AudioPlayer from "./AudioPlayer"
 import { sendMessage, checkHealth } from "../services/api"
 
 function ChatPage() {
@@ -20,8 +21,10 @@ function ChatPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [backendStatus, setBackendStatus] = useState("checking")
+  
+  const [currentTrack, setCurrentTrack] = useState(null)
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(null)
 
-  // Vérifier le statut du backend au chargement
   useEffect(() => {
     const checkBackend = async () => {
       try {
@@ -46,17 +49,11 @@ function ChatPage() {
     setIsLoading(true)
   
     try {
-      // Appel API réel
       const response = await sendMessage(userMessage, messages.map(m => ({
         role: m.type === "user" ? "user" : "assistant",
         content: m.content
       })))
   
-      console.log("🔍 Réponse complète:", response)
-      console.log("🔍 Playlist:", response.playlist)
-      console.log("🔍 Playlist.playlist:", response.playlist?.playlist)
-  
-      // ✅ CORRECTION : Utiliser response.response au lieu de response.playlist.response
       const botResponse = {
         id: Date.now() + 1,
         type: "bot",
@@ -66,7 +63,6 @@ function ChatPage() {
   
       setMessages((prev) => [...prev, botResponse])
   
-      // ✅ CORRECTION : Vérifier que playlist existe ET que playlist.playlist existe
       if (response.playlist && Array.isArray(response.playlist.playlist) && response.playlist.playlist.length > 0) {
         const backendPlaylist = response.playlist
         
@@ -86,7 +82,7 @@ function ChatPage() {
           "echauffement": "Chill"
         }
   
-        setPlaylist({
+        const newPlaylist = {
           title: `Playlist ${backendPlaylist.sport.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}`,
           description: `Composée par IA • ${backendPlaylist.track_count} morceaux • ${backendPlaylist.bpm_range} BPM`,
           mood: sportToMood[backendPlaylist.sport] || "Énergique",
@@ -98,16 +94,14 @@ function ChatPage() {
             genre: sportToGenre[backendPlaylist.sport] || "Music",
             cover: `/album-cover-${index % 5}.jpg`,
             identifier: track.identifier,
-            preview_url: track.preview_url
+            preview_url: track.preview_url,
+            stream_url: track.stream_url || track.preview_url
           }))
-        })
+        }
+        
+        setPlaylist(newPlaylist)
         
         console.log("✅ Playlist définie avec", backendPlaylist.playlist.length, "tracks")
-        console.log("📊 Première track:", backendPlaylist.playlist[0])
-
-        console.log("✅ Playlist définie !")
-      } else {
-        console.log("❌ Pas de playlist à afficher")
       }
   
       setIsLoading(false)
@@ -133,16 +127,40 @@ function ChatPage() {
     [handleSendMessage],
   )
 
+  const handlePlayTrack = useCallback((track, index) => {
+    setCurrentTrack(track)
+    setCurrentTrackIndex(index)
+  }, [])
+
+  const handleNextTrack = useCallback(() => {
+    if (!playlist || currentTrackIndex === null) return
+    
+    const nextIndex = (currentTrackIndex + 1) % playlist.tracks.length
+    setCurrentTrack(playlist.tracks[nextIndex])
+    setCurrentTrackIndex(nextIndex)
+  }, [playlist, currentTrackIndex])
+
+  const handlePreviousTrack = useCallback(() => {
+    if (!playlist || currentTrackIndex === null) return
+    
+    const prevIndex = currentTrackIndex === 0 ? playlist.tracks.length - 1 : currentTrackIndex - 1
+    setCurrentTrack(playlist.tracks[prevIndex])
+    setCurrentTrackIndex(prevIndex)
+  }, [playlist, currentTrackIndex])
+
+  const handleClosePlayer = useCallback(() => {
+    setCurrentTrack(null)
+    setCurrentTrackIndex(null)
+  }, [])
+
   return (
     <div className="relative flex h-screen bg-[#050508] overflow-hidden">
-      {/* Ambient background */}
       <div className="ambient-bg">
         <div className="ambient-orb ambient-orb-1"></div>
         <div className="ambient-orb ambient-orb-2"></div>
         <div className="ambient-orb ambient-orb-3"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 flex w-full">
         <Sidebar
           isOpen={sidebarOpen}
@@ -151,7 +169,6 @@ function ChatPage() {
         />
 
         <main className="flex-1 flex flex-col min-w-0">
-          {/* Header */}
           <header className="flex items-center justify-between px-6 py-4 glass-strong">
             <div className="flex items-center gap-4">
               <button
@@ -204,20 +221,32 @@ function ChatPage() {
             </div>
           </header>
 
-          {/* Content */}
-          <div className="flex-1 flex gap-6 p-6 overflow-hidden">
+          <div className={`flex-1 flex gap-6 p-6 overflow-hidden ${currentTrack ? 'pb-24' : ''}`}>
             <div className={`flex-1 min-w-0 transition-all duration-500 ${playlist ? "lg:w-3/5" : "w-full"}`}>
               <ChatBox messages={messages} onSendMessage={handleSendMessage} isLoading={isLoading} />
             </div>
 
             {playlist && (
               <div className="hidden lg:block lg:w-2/5 min-w-[380px] animate-slide-in-right">
-                <PlaylistView playlist={playlist} />
+                <PlaylistView 
+                  playlist={playlist} 
+                  onPlayTrack={handlePlayTrack}
+                  currentTrackId={currentTrack?.id}
+                />
               </div>
             )}
           </div>
         </main>
       </div>
+
+      {currentTrack && (
+        <AudioPlayer
+          currentTrack={currentTrack}
+          onNext={handleNextTrack}
+          onPrevious={handlePreviousTrack}
+          onClose={handleClosePlayer}
+        />
+      )}
     </div>
   )
 }
